@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -9,7 +7,7 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-       _enemy.Init(_target);
-        Instantiate(_enemy, transform.position, transform.rotation);
+        _enemy = Instantiate(_enemy, transform.position, transform.rotation);
+        _enemy.Init(_target);
     }
 }
